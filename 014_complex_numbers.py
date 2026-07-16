@@ -1,68 +1,173 @@
-###########################################################
-# Complex Numbers in Python
-###########################################################
-
-# Python supports different data types:
-# int, float, string, boolean, complex
+# ===========================================================
+# Lesson: Complex Numbers in Python
+# ===========================================================
 
 
+"""
+Teaching Notes:
+
+Lesson Objectives:
+- Understand what complex numbers are.
+- Learn how to create complex numbers in Python.
+- Access real and imaginary parts.
+- Perform mathematical operations on complex numbers.
+
+
+Prerequisites:
+- Variables
+- Data Types
+- Arithmetic Operators
+
+
+What are Complex Numbers?
+
+Complex numbers are numbers that contain:
+
+Real part + Imaginary part
+
+
+Mathematical form:
+
+a + bi
+
+
+In Python:
+
+a + bj
+
+
+Important Note:
+
+Python uses "j" instead of "i"
+for the imaginary part.
+
+
+Example:
+
+z = 3 + 4j
+
+
+Real part:
+3
+
+Imaginary part:
+4j
+
+
+
+Where are Complex Numbers Used?
+
+- Engineering
+- Physics
+- Signal Processing
+- Electrical circuits
+- Mathematics
+- Machine Learning algorithms
+
+
+Python supports these basic numeric types:
+
+1. int
+   Example:
+   10
+
+
+2. float
+   Example:
+   10.5
+
+
+3. complex
+   Example:
+   3 + 4j
+
+
+"""
+
+
+
 ###########################################################
-# 1. Creating Complex Numbers
+# Part 1: Creating Complex Numbers
 ###########################################################
+
 
 # A complex number consists of:
 # Real part + Imaginary part
 
+
 # Syntax:
-# a + bj
+# real + imaginary j
+
 
 z = 3 + 4j
 
+
 print(z)
+
 
 print(type(z))
 
 
 
+
 ###########################################################
-# 2. Real and Imaginary Parts
+# Part 2: Accessing Real and Imaginary Parts
 ###########################################################
+
 
 # real:
 # Returns the real part of the complex number
 
+
 print("Real part:", z.real)
+
 
 
 # imag:
 # Returns the imaginary part
 
+
 print("Imaginary part:", z.imag)
 
 
 
+
 ###########################################################
-# 3. Creating Complex Numbers using complex()
+# Part 3: Creating Complex Numbers using complex()
 ###########################################################
 
-# We can create complex numbers using complex()
+
+# We can create complex numbers
+# using the complex() function
+
+
+# Syntax:
+
+# complex(real, imaginary)
+
 
 z1 = complex(2, 5)
+
 
 print(z1)
 
 
+
 # This means:
+
 # Real part = 2
 # Imaginary part = 5
 
 
 
+
 ###########################################################
-# 4. Complex Number Operations
+# Part 4: Complex Number Operations
 ###########################################################
 
+
 z1 = 2 + 3j
+
 z2 = 1 + 4j
 
 
@@ -91,79 +196,120 @@ print("Division:", z1 / z2)
 
 
 
+
 ###########################################################
-# 5. Using Complex Numbers in Expressions
+# Part 5: Using Complex Numbers in Expressions
 ###########################################################
+
 
 z = 5 + 2j
 
+
 result = z * 2
+
 
 print(result)
 
 
 
+
 ###########################################################
-# 6. Finding Magnitude (Absolute Value)
+# Part 6: Magnitude (Absolute Value)
 ###########################################################
 
-# abs() returns the distance from zero
+
+# abs() returns the distance of the complex number
+# from zero.
+
 
 z = 3 + 4j
+
 
 print(abs(z))
 
 
-# Result:
+
+# Calculation:
+
+# sqrt(real² + imaginary²)
+
 # sqrt(3² + 4²)
+
+# sqrt(9 + 16)
+
 # = 5
 
 
 
+
 ###########################################################
-# 7. Conjugate
+# Part 7: Complex Conjugate
 ###########################################################
 
-# The conjugate changes the sign of imaginary part
+
+# conjugate() changes the sign
+# of the imaginary part.
+
 
 z = 3 + 4j
+
 
 print(z.conjugate())
 
 
+
 # Output:
+
 # 3 - 4j
 
 
 
+
 ###########################################################
-# 8. Example: Representing a Point
+# Part 8: Complex Numbers as Coordinates
 ###########################################################
+
 
 # Complex numbers can represent points
 # in a 2D coordinate system.
 
+
+# Real part represents X-axis
+
+# Imaginary part represents Y-axis
+
+
+
 point = 4 + 7j
 
 
+
 x = point.real
+
 y = point.imag
 
 
+
 print("X =", x)
+
 print("Y =", y)
 
 
 
+
 ###########################################################
-# 9. Checking Complex Type
+# Part 9: Checking Complex Type
 ###########################################################
+
 
 number = 10 + 5j
 
 
+
 if isinstance(number, complex):
+
     print("This is a complex number")
+
 
 
 
@@ -171,15 +317,28 @@ if isinstance(number, complex):
 # Practice
 ###########################################################
 
-# Create two complex numbers:
 
-# z1 = 6 + 2j
-# z2 = 3 + 5j
+"""
+Create two complex numbers:
 
 
-# Calculate:
-# 1. Addition
-# 2. Subtraction
-# 3. Multiplication
-# 4. Real part of z1
-# 5. Imaginary part of z2
+z1 = 6 + 2j
+
+z2 = 3 + 5j
+
+
+
+Calculate:
+
+
+1. Addition
+
+2. Subtraction
+
+3. Multiplication
+
+4. Real part of z1
+
+5. Imaginary part of z2
+
+"""
