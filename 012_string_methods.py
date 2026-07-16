@@ -1,6 +1,100 @@
+# ===========================================================
+# Lesson: String Methods
+# ===========================================================
+
+
+"""
+Teaching Notes:
+
+Lesson Objectives:
+- Understand built-in string methods in Python.
+- Learn how to modify and analyze strings.
+- Practice methods used for:
+    - Changing string format
+    - Searching inside strings
+    - Checking string content
+    - Removing spaces
+    - Splitting and joining strings
+
+Important Notes:
+- String methods are functions that belong to string objects.
+- Methods are called using the dot operator (.)
+
+Example:
+
+string.method()
+
+Example:
+
+name.upper()
+
+
+Important Concept:
+- Strings are immutable.
+- String methods do not modify the original string.
+- They return a new string.
+
+Example:
+
+text = "hello"
+
+text.upper()
+
+The original text is still:
+hello
+
+
+Categories of String Methods:
+
+1. Changing Case:
+- capitalize()
+- upper()
+- lower()
+- title()
+- swapcase()
+
+
+2. Searching:
+- find()
+- index()
+- count()
+- startswith()
+
+
+3. Checking Content:
+- isupper()
+- islower()
+- istitle()
+- isspace()
+- isalpha()
+- isnumeric()
+
+
+4. Modifying Strings:
+- replace()
+- strip()
+- lstrip()
+- rstrip()
+
+
+5. Splitting and Joining:
+- split()
+- join()
+
+
+6. Formatting:
+- zfill()
+
+
+"""
+
+
+
 ###########################################################
 # String Methods
-#capitalize()
+###########################################################
+
+# capitalize()
 # upper()
 # lower()
 # len()
@@ -12,8 +106,6 @@
 # title()
 # istitle()
 # isspace()
-# islower()
-# isupper()
 # strip()
 # lstrip()
 # rstrip()
@@ -25,13 +117,23 @@
 # startswith()
 # isalpha()
 # isnumeric()
-# isalnumeric()
+# isalnum()
+
+
+###########################################################
+# Part 1: Creating String
 ###########################################################
 
 # Strings have built-in methods that allow us
 # to modify and analyze text.
 
 myString = "Hello World From PYTHON"
+
+
+
+###########################################################
+# Part 2: Changing String Case
+###########################################################
 
 
 # capitalize():
@@ -41,10 +143,12 @@ myString = "Hello World From PYTHON"
 print(myString.capitalize())
 
 
+
 # upper():
 # Converts all characters to uppercase
 
 print(myString.upper())
+
 
 
 # lower():
@@ -53,10 +157,41 @@ print(myString.upper())
 print(myString.lower())
 
 
+
+# title():
+# Makes the first letter of each word uppercase
+
+print(myString.title())
+
+
+
+# swapcase():
+# Converts uppercase characters to lowercase
+# and lowercase characters to uppercase
+
+swapcase_string = "Hello World"
+
+print(swapcase_string.swapcase())
+
+
+
+
+###########################################################
+# Part 3: String Length
+###########################################################
+
+
 # len():
 # Returns the number of characters in the string
 
 print(len(myString))
+
+
+
+
+###########################################################
+# Part 4: Searching Inside Strings
+###########################################################
 
 
 # find():
@@ -66,11 +201,35 @@ print(len(myString))
 print(myString.find("World"))
 
 
+
 # index():
-# Similar to find(), but gives an error
-# if the word does not exist
+# Similar to find()
+# Gives an error if the word does not exist
 
 print(myString.index("World"))
+
+
+
+# count():
+# Counts how many times a substring appears
+
+count_string = "Hello World, Hello Python"
+
+print(count_string.count("Hello"))
+
+
+
+# startswith():
+# Checks if the string starts with a specific value
+
+print(count_string.startswith("Hello"))
+
+
+
+
+###########################################################
+# Part 5: Checking String Content
+###########################################################
 
 
 # isupper():
@@ -79,33 +238,19 @@ print(myString.index("World"))
 print(myString.isupper())
 
 
+
 # islower():
 # Checks if all characters are lowercase
 
 print(myString.islower())
 
 
-# replace():
-# Replaces part of a string with another value
-
-print(myString.replace("PYTHON", "Java"))
-
-# The original string does not change
-# because strings are immutable
-
-print(myString)
-
-
-# title():
-# Makes the first letter of each word uppercase
-
-print(myString.title())
-
 
 # istitle():
-# Checks if the string is written in title format
+# Checks if the string follows title format
 
 print(myString.istitle())
+
 
 
 # isspace():
@@ -115,90 +260,196 @@ sp = "   "
 
 print(sp.isspace())
 
-# islower():
-# Checks if all characters are lowercase
-islower_string = "hello world"
-print(islower_string.islower())  # Output: True
 
-islower_string2 = "Hello World"
-print(islower_string2.islower())  # Output: False
 
-# isupper():
-# Checks if all characters are uppercase
-isupper_string = "HELLO WORLD"
-print(isupper_string.isupper())  # Output: True
+# isalpha():
+# Checks if all characters are letters
 
-isupper_string2 = "Hello World"
-print(isupper_string2.isupper())  # Output: False
+alpha_string = "HelloWorld"
+
+print(alpha_string.isalpha())
+
+
+alpha_string2 = "Hello World"
+
+print(alpha_string2.isalpha())
+
+
+
+# isnumeric():
+# Checks if all characters are numbers
+
+numeric_string = "12345"
+
+print(numeric_string.isnumeric())
+
+
+numeric_string2 = "12345abc"
+
+print(numeric_string2.isnumeric())
+
+
+
+
+###########################################################
+# Part 6: Replacing Text
+###########################################################
+
+
+# replace():
+# Replaces part of a string with another value
+
+print(myString.replace("PYTHON", "Java"))
+
+
+# The original string does not change
+# because strings are immutable
+
+print(myString)
+
+
+
+
+###########################################################
+# Part 7: Removing Spaces
+###########################################################
 
 
 # strip():
-# Removes whitespace from the beginning and end of a string
+# Removes whitespace from beginning and end
+
 strped_string = "   Hello World   "
+
 print(strped_string.strip())
 
+
+
 # lstrip():
-# Removes whitespace from the beginning of a string
+# Removes whitespace from the beginning
+
 print(strped_string.lstrip())
 
+
+
 # rstrip():
-# Removes whitespace from the end of a string
+# Removes whitespace from the end
+
 print(strped_string.rstrip())
 
+
+
 # strip("#"):
-# Removes the specified character from the beginning and end of a string
-strped_string2 = "###Hello World###"    
+# Removes the specified character
+
+strped_string2 = "###Hello World###"
+
 print(strped_string2.strip("#"))
 
+
+
+
+###########################################################
+# Part 8: Split and Join
+###########################################################
+
+
 # split():
-# Splits a string into a list of substrings based on a specified delimiter
+# Converts string into a list
+# based on a separator
+
 sentence = "Hello World From Python"
+
 print(sentence.split(" "))
 
-# split() with a different delimiter
+
+
+# split() with different delimiter
+
 sentence2 = "apple,banana,orange,grape"
+
 print(sentence2.split(","))
 
+
+
 # join():
-# Joins a list of strings into a single string with a specified delimiter
-joined_string = " ".join(["Hello", "World", "From", "Python"])
+# Combines list elements into one string
+
+joined_string = " ".join(
+    ["Hello", "World", "From", "Python"]
+)
+
 print(joined_string)
 
-joined_string2 = "-".join(["apple", "banana", "orange", "grape"])
+
+
+joined_string2 = "-".join(
+    ["apple", "banana", "orange", "grape"]
+)
+
 print(joined_string2)
 
 
+
+
+###########################################################
+# Part 9: zfill()
+###########################################################
+
+
 # zfill():
-# Pads a string with zeros on the left until it reaches a specified length
+# Adds zeros to the left side
+# until reaching the required length
+
+
 number = "42"
-print(number.zfill(5))  # Output: 00042
 
-# swapcase():
-# Swaps the case of each character in the string
-swapcase_string = "Hello World"
-print(swapcase_string.swapcase())  # Output: hELLO wORLD
+print(number.zfill(5))
 
-# count():
-# Counts the number of occurrences of a substring in the string
-count_string = "Hello World, Hello Python"
-print(count_string.count("Hello"))  # Output: 2
+# Output:
+# 00042
 
-# startswith():
-# Checks if the string starts with a specified substring
-print(count_string.startswith("Hello"))  # Output: True
 
-# isalpha():
-# Checks if all characters in the string are alphabetic
-alpha_string = "HelloWorld"
-print(alpha_string.isalpha())  # Output: True
 
-alpha_string2 = "Hello World"
-print(alpha_string2.isalpha())  # Output: False
 
-# isnumeric():
-# Checks if all characters in the string are numeric
-numeric_string = "12345"
-print(numeric_string.isnumeric())  # Output: True
+###########################################################
+# Practice
+###########################################################
 
-numeric_string2 = "12345abc"
-print(numeric_string2.isnumeric())  # Output: False
+
+"""
+Practice Tasks:
+
+1. Create a variable:
+
+text = "python programming"
+
+
+Apply:
+- upper()
+- title()
+- replace()
+
+
+2. Create:
+
+sentence = "I love Python Python"
+
+
+Find:
+- Number of times Python appears.
+
+
+3. Create:
+
+name = "   Sara   "
+
+Remove extra spaces.
+
+
+4. Convert:
+
+"Python,Java,C++"
+
+into a list using split().
+
+"""
