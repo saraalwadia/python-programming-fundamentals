@@ -53,14 +53,10 @@ year = int(input("Enter year: "))
 # A year is leap if it is divisible by 4
 
 if year % 4 == 0:
-
     print("Leap Year")
 
-
 else:
-
     print("Normal Year")
-
 
 
 # ===========================================================
@@ -69,34 +65,19 @@ else:
 
 
 months = {
-
     1: "Jan",
-
     2: "Feb",
-
     3: "Mar",
-
     4: "Apr",
-
     5: "May",
-
     6: "Jun",
-
     7: "Jul",
-
     8: "Aug",
-
     9: "Sep",
-
     10: "Oct",
-
     11: "Nov",
-
     12: "Dec"
-
 }
-
-
 
 number = int(input("Enter Month Number: "))
 
@@ -105,12 +86,8 @@ number = int(input("Enter Month Number: "))
 # Search for month number
 
 for n in range(len(months) + 1):
-
-
     if n == number:
-
         print(months[n])
-
         break
 
 
@@ -131,10 +108,7 @@ numbers = []
 # Check numbers between 1500 and 2700
 
 for x in range(1500, 2701):
-
-
     if x % 7 == 0 and x % 5 == 0:
-
         numbers.append(str(x))
 
 
