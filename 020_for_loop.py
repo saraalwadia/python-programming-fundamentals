@@ -7,81 +7,83 @@
 Teaching Notes:
 
 Lesson Objectives:
-- Understand how loops work in Python.
+- Understand how loops work.
 - Learn how to repeat code using for loop.
 - Learn how to use range().
 - Learn how to loop through lists and strings.
-- Practice using loops with conditions.
+- Understand nested loops.
+- Learn break and continue statements.
+
 
 Topics Covered:
 
 
 PART 1: For Loop
-- for loop is used to repeat code multiple times.
+- for loop is used to repeat code.
 - It works with sequences:
-    - Lists
-    - Strings
-    - Range
+    - range()
+    - lists
+    - strings
 
 
 PART 2: range() Function
 
 Syntax:
 
+range(end)
+
+- Starts from 0.
+- Stops before end.
+
+
+range(start, end)
+
+- Starts from start.
+- Stops before end.
+
+
 range(start, end, step)
 
-Rules:
-- start is included.
-- end is not included.
-- step defines the increment.
-
-
-Examples:
-
-range(5)
-
-Output:
-0 1 2 3 4
-
-
-range(1,5)
-
-Output:
-1 2 3 4
+- step controls the increment.
 
 
 
 PART 3: Loop Through Lists
-- We can access list elements using:
-    - Index
-    - Direct values
+- We can loop directly through list values.
+- We can also access elements using indexes.
 
 
 PART 4: Loop Through Strings
 - Strings are sequences of characters.
-- for loop can access each character separately.
+- Each character can be accessed using a loop.
 
 
-PART 5: Using Conditions Inside Loops
-- We can use if statements inside loops.
-- Useful for filtering data.
+PART 5: Nested For Loop
+- A loop inside another loop.
+- Used for working with multi-dimensional data.
+
+
+PART 6: break
+- Stops the loop completely.
+
+
+PART 7: continue
+- Skips the current iteration and moves to the next one.
 
 
 Important Notes:
 - The code inside the loop must be indented.
-- The loop variable changes automatically.
 - range() does not include the ending value.
-
+- Always check the loop condition and values.
 """
 
 
 # ===========================================================
-# PART 1: Using range()
+# PART 1: Basic For Loop with range()
 # ===========================================================
 
 
-# range(10) starts from 0 and stops before 10
-
+# range(end)
 
 for i in range(10):
 
@@ -94,17 +96,39 @@ for i in range(10):
 # ===========================================================
 
 
-# Start from 0 and stop before 10
-
-
-for i in range(0, 10):
+for i in range(1, 10):
 
     print(i)
 
 
 
 # ===========================================================
-# PART 3: Loop Through List
+# PART 3: range(start, end, step)
+# ===========================================================
+
+
+for i in range(0, 101, 10):
+
+    print(i)
+
+
+
+# ===========================================================
+# PART 4: Practical Example - Multiplication Table
+# ===========================================================
+
+
+number = int(input("Enter number: "))
+
+
+for i in range(0, 11):
+
+    print(i * number)
+
+
+
+# ===========================================================
+# PART 5: Loop Through List
 # ===========================================================
 
 
@@ -112,7 +136,7 @@ arr = ["a", "b", "c"]
 
 
 
-# Access list indexes
+# Access indexes
 
 for i in range(len(arr)):
 
@@ -120,7 +144,7 @@ for i in range(len(arr)):
 
 
 
-# Access list values using index
+# Access values using index
 
 for i in range(len(arr)):
 
@@ -128,12 +152,17 @@ for i in range(len(arr)):
 
 
 
-# ===========================================================
-# PART 4: Loop Through String
-# ===========================================================
+# Direct access to values
+
+for value in arr:
+
+    print(value)
 
 
-# Access each character in the string
+
+# ===========================================================
+# PART 6: Loop Through String
+# ===========================================================
 
 
 for letter in "Sara Mohammed":
@@ -143,7 +172,73 @@ for letter in "Sara Mohammed":
 
 
 # ===========================================================
-# PART 5: Practice Exercises
+# PART 7: Nested For Loop
+# ===========================================================
+
+
+grid = [
+
+    [1, 2, 3],
+
+    [4, 5, 6],
+
+    [7, 8, 9],
+
+    [0]
+
+]
+
+
+# Access rows
+
+for row in grid:
+
+    print(row)
+
+
+
+# Access every element
+
+for row in grid:
+
+    for col in row:
+
+        print(col)
+
+
+
+# ===========================================================
+# PART 8: break Statement
+# ===========================================================
+
+
+for i in range(10):
+
+    if i == 5:
+
+        break
+
+    print(i)
+
+
+
+# ===========================================================
+# PART 9: continue Statement
+# ===========================================================
+
+
+for i in range(10):
+
+    if i == 5:
+
+        continue
+
+    print(i)
+
+
+
+# ===========================================================
+# PART 10: Exercises
 # ===========================================================
 
 
@@ -159,24 +254,24 @@ for i in range(11):
 
 
 # Exercise 2:
-# Calculate the sum of numbers from 0 to 99
+# Calculate sum from 0 to 99
 
 
-total = 0
+result = 0
 
 
 for i in range(100):
 
-    total += i
+    result += i
 
 
-print(total)
+print(result)
 
 
 
 # Exercise 3:
-# Find numbers between 1500 and 2700
-# that are divisible by 7 and 5
+# Find numbers divisible by 7 and 5
+# Between 1500 and 2700
 
 
 numbers = []
