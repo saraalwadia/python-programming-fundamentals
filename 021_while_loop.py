@@ -9,15 +9,16 @@ Teaching Notes:
 Lesson Objectives:
 - Understand how while loop works.
 - Learn how to repeat code based on a condition.
-- Understand the importance of updating the loop variable.
-- Practice creating simple while loops.
+- Learn how to update loop variables.
+- Understand infinite loops.
+- Use while loop with user input.
 
 
 Topics Covered:
 
 
 PART 1: While Loop
-- while repeats a block of code as long as the condition is True.
+- while repeats code while a condition is True.
 - The condition is checked before every iteration.
 
 
@@ -29,42 +30,25 @@ while condition:
 
 
 
-PART 2: Updating Loop Variable
-- The loop variable must be changed inside the loop.
-- If the condition never becomes False, the loop will run forever.
+PART 2: Updating Counter
+- The loop variable must change inside the loop.
+- Otherwise, the loop will never stop.
 
 
-Example:
-
-i = 0
-
-while i < 5:
-
-    print(i)
-
-    i += 1
+PART 3: Infinite Loop
+- Happens when the condition never becomes False.
+- Always make sure the loop has a stopping condition.
 
 
-
-PART 3: While Loop vs For Loop
-
-For Loop:
-- Used when the number of repetitions is known.
-- Commonly used with range().
-
-
-While Loop:
-- Used when repetition depends on a condition.
-- The number of repetitions may not be known.
+PART 4: While with User Input
+- Useful when we don't know how many times the loop will run.
 
 
 Important Notes:
-- The condition must return True or False.
-- The code inside while must be indented.
-- Always make sure the loop can stop.
-
+- while depends on a condition.
+- The condition must eventually become False.
+- Indentation is required.
 """
-
 
 
 # ===========================================================
@@ -75,29 +59,17 @@ Important Notes:
 i = 0
 
 
-# Repeat while i is less than 10
-
 while i < 10:
 
     print(i)
-
-    # Increase i by 1
-    # Without this line, the loop will never stop
 
     i += 1
 
 
 
 # ===========================================================
-# PART 2: Practice
+# PART 2: Print Numbers from 1 to 10
 # ===========================================================
-
-
-"""
-Task:
-
-Print numbers from 1 to 10.
-"""
 
 
 i = 1
@@ -108,3 +80,54 @@ while i <= 10:
     print(i)
 
     i += 1
+
+
+
+# ===========================================================
+# PART 3: Infinite Loop Example
+# ===========================================================
+
+
+"""
+This loop will never stop:
+
+while True:
+
+    print("Hello")
+
+"""
+
+
+# ===========================================================
+# PART 4: While Loop with User Input
+# ===========================================================
+
+
+password = ""
+
+
+while password != "1234":
+
+    password = input("Enter password: ")
+
+
+print("Correct password")
+
+
+
+# ===========================================================
+# PART 5: Practice
+# ===========================================================
+
+
+# Print numbers from 10 to 1
+
+
+number = 10
+
+
+while number >= 1:
+
+    print(number)
+
+    number -= 1
