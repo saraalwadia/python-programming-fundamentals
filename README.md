@@ -1,104 +1,81 @@
 # Python Programming Fundamentals
 
-## A Practical Course for Building Strong Programming Foundations in Python
+A practical, project-based Python course designed to build strong programming foundations and develop the skills needed to create real applications.
 
+## Course
 
-**Prepared by:**  
-Sara Alwadia  
-Programming Instructor | Software & Project Coordination Enthusiast  
+* **Duration:** 72 Hours
+* **Length:** 8–9 Weeks
+* **Level:** Beginner to Intermediate
+* **Language:** Python 3
 
-Email: alwdia.sara@gmail.com
+## About
 
+This repository contains the lessons, exercises, examples, and practical projects developed throughout the **Python Programming Fundamentals** course.
 
----
+The course follows a progressive learning path, starting with Python fundamentals and moving toward functions, data structures, OOP, GUI development, games, databases, and complete applications.
 
-© 2026 Sara Alwadia. All Rights Reserved.
+## Topics
 
+* Python Fundamentals
+* Variables & Data Types
+* Strings
+* Conditions & Loops
+* Functions
+* Data Structures
+* File Handling & Modules
+* Exception Handling
+* Object-Oriented Programming
+* Tkinter
+* SQLite & CRUD
 
-# Course Overview
+## Projects
 
-| Item | Details |
-|---|---|
-| Course Title | Python Programming Fundamentals |
-| Duration | 50 Hours |
-| Course Length | 6–7 Weeks |
-| Sessions per Week | 3 Sessions |
-| Session Duration | 2–3 Hours |
-| Level | Beginner |
-| Delivery Mode | In-person / Online |
+The repository includes practical projects such as:
 
+* Tkinter Calculator
+* Student Information System
+* Rock Paper Scissors
+* Tic-Tac-Toe
+* Snake Game
+* Expense Tracker
+* Business Management System
 
-# Course Objectives
+## Repository Structure
 
-By the end of this course, participants will be able to:
+Lessons and projects are organized sequentially according to the learning path, from basic Python concepts to more advanced applications.
 
-- Understand core programming concepts using Python.
-- Write basic Python programs using correct syntax.
-- Apply problem-solving techniques using Python.
-- Work with Python data structures such as lists, tuples, and dictionaries.
-- Build simple real-world mini projects.
-- Develop logical and computational thinking skills.
+```text
+python-programming-fundamentals/
+│
+├── 001_print.py
+├── 002_comments.py
+├── 003_variables.py
+├── ...
+├── 050_tkinter_basics.py
+├── 051_tkinter_calculator.py
+├── ...
+├── 059_business_management_system.py
+│
+├── COURSE_SYLLABUS.md
+├── README.md
+└── .gitignore
+```
 
+## Course Syllabus
 
-# Course Syllabus
+For the complete course structure, weekly distribution, detailed topics, projects, and learning outcomes:
 
-| Module | Topic | Content | Hours |
-|---|---|---|---|
-| 1 | Introduction to Programming & Python | Programming basics, Python overview, installation (Python + IDE), first program, syntax fundamentals | 4 |
-| 2 | Variables, Data Types & Strings | Variables, numbers, strings, string methods, type conversion, operators | 6 |
-| 3 | Input/Output & Control Structures | input() function, output formatting, if/elif/else, logical operators | 8 |
-| 4 | Loops in Python | for loop, while loop, nested loops, loop control (break, continue), practice exercises | 6 |
-| 5 | Functions | Defining functions, parameters, return values, scope, reusable code concepts | 6 |
-| 6 | Data Structures | Lists, tuples, sets, dictionaries, operations and use cases | 8 |
-| 7 | File Handling | Reading and writing files, working with text files, basic data storage | 4 |
-| 8 | Error Handling & Debugging Basics | Try/except, handling runtime errors, debugging techniques | 3 |
-| 9 | Introduction to OOP in Python | Classes & objects, constructors, attributes, methods, basic OOP principles | 3 |
-| 10 | Final Project | Build a simple Python project (Student System, Quiz App, or To-Do App) | 2 |
+**[View the Course Syllabus](COURSE_SYLLABUS.md)**
 
+## Tools
 
-# Tools & Technologies
+Python 3 · VS Code · Tkinter · SQLite · SQL · Git · GitHub
 
-| Tool | Purpose |
-|---|---|
-| Python 3 | Programming Language |
-| VS Code / PyCharm | Development Environment |
-| Jupyter Notebook (Optional) | Interactive Coding |
+## Author
 
-
-# Teaching Methodology
-
-| Method | Description |
-|---|---|
-| Interactive Classes | Concept explanation and discussion |
-| Live Coding | Real-time coding demonstrations |
-| Hands-on Practice | Exercises and coding tasks during sessions |
-| Problem Solving | Developing logical thinking and programming skills |
-| Project-Based Learning | Applying concepts through practical projects |
-
-
-# Repository Contents
-
-This repository includes:
-
-- Python examples and exercises.
-- Practice problems.
-- Mini projects.
-- Course materials and resources.
-
-
-# Learning Outcomes
-
-After completing this course, students will be able to:
-
-- Write Python programs from scratch.
-- Understand fundamental programming concepts.
-- Use variables, conditions, loops, functions, and data structures.
-- Handle files and errors in Python.
-- Apply programming concepts to build simple applications.
-
-
-# Author
-
-Sara Alwadia
+**Sara Alwadia**
 
 Programming Instructor | Software & Project Coordination Enthusiast
+
+© 2026 Sara Alwadia
